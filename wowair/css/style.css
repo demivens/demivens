@@ -1,0 +1,184 @@
+
+@font-face {
+    font-family: "My Custom Font";
+    src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+} 
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+header {
+	height: 3.125em;
+	border-bottom: 1px solid #707070;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+	padding: 0 10px;
+	margin-bottom: 30px;
+}
+
+header img {
+	width: 2.8em;
+	height: 2.8em;
+	position: absolute;
+	top: 30px;
+	left: calc( 50% - 1.4em );
+}
+
+header button {
+	border: none;
+	background-color: transparent;
+	margin-left: auto;
+}
+
+header svg {
+	width: 1.9em;
+
+}
+
+main {
+	padding: 0 50px;
+}
+
+form {
+	width: 100%;
+}
+
+select {
+	background-image: url('../img/arrow-down.svg');
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	background-size: 15px;
+	background-color: #DBDBDB;
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 4px;
+	padding-right: 20px;
+	-webkit-appearance:none;
+	width: 10em;
+	margin-left: 190px;
+	
+}
+
+
+h1	{ 
+	font-family: arial;
+	font-size: 1.6em;
+	color: rgb(167, 8, 169);
+	width: 100%;
+}
+
+
+h2	{ 
+    		font-family: arial;
+    		font-size: 0.875em;
+}
+
+p {
+    		margin: 1.25rem 0 1.25rem 0;
+    		font-family: helvetica;
+    		font-size: 0.9em; 
+    		line-height: 1.5em;
+
+ 	}
+
+main section article {
+	background-color: white;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	margin-bottom: 1em;
+}
+
+main section article img {
+	width: 100%;
+}
+
+@media (min-width:47em) {
+  /*main {
+    grid-template-columns: 1fr 1fr;
+  }*/
+
+  main section:nth-child( 2 ){
+  	background-color: pink;
+  	width: 100%;
+  }
+
+  main section:nth-child( 3 ) {
+  	display: flex;
+  	justify-content: space-between;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  }
+
+  main section article {
+  	width: calc( 50% - 10px );
+  }
+}
+
+
+ 
+
+
+@media (min-width:67em) {
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+  main section:nth-child( 2 ){
+  	width: calc( 25% - 10px );
+  }
+
+  main section:nth-child( 3 ) {
+  	width: calc( 75% - 10px );
+  }
+
+  main section article {
+  	width: calc( 50% - 10px );
+  }
+}
+ 
+
+/*
+li:first-child a {
+	color:red;
+}
+
+li:first-child {
+	font-weight: bold;
+}
+
+p:first-of-type { 
+font-weight: bold;
+}
+
+p:nth-of-type(2){
+	font-weight: bold;
+}
+a[href="homepage.html"] {
+	color:red;
+}
+
+a[href^="https/homepage.html"] {
+	color:red;
+}
+
+a[href$='.pdf']::after { 
+content: "(dit is een pdf)";
+}
+
+
+/*
+main{
+	
+	display:grid;
+ grid-template-columns: 1r 1fr 1 fr;
+ grid-template-row: 3em auto;
+
+ }
