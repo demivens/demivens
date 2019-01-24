@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>Demi Vens | WOW A!R verhalenwebsite</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
+    <meta name="viewport" content="witdth=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img src="img/logo.svg">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="leeslijst.html">
+                            <img src="img/lKlein.svg" alt="laden" class="laden">
+                            <img src="img/eKlein.svg" alt="error" class="error">
+                            <img src="img/cKlein.svg" alt="succes" class="succes">
+                            <span id="mijn">Leeslijst</span>
+                        </a>
+                        <li><a href="verhaal.html"><span class="wowair">Mijn wow</span>
+                        <i class="fa fa-lock"></i></a></li>
+                    </li>
+                 
+                    </ul>
+                </nav>
+            </div>
+            <section>
+                <h1>99 verhalen voor op reis</h1>
+            </section>
+            <article>
+             
+
+                <h2>Meest besproken deze week</h2>
+                <!-- De meest besproken verhalen geel -->
+                <h3>Telegrafisch</h3>
+                <p>
+                    BUS STOPT...VAN RAYMOND QUENEAU.... STOP VROUW VRAAGT....
+                </p>
+
+
+                <footer>
+                    <form action="verhaal.html">
+
+                        <ul>
+                            <li>Rusteloos</li>
+                            <li>120</li>
+                            <li>0-1 min</li>
+                        </ul>
+
+                        <input type="submit" value="Verder lezen" />
+
+                    </form>
+
+                    
+                </footer>
+                <img src="img/artikel.jpg" alt="Verhaal rusteloos" />
+
+            </article>
+        </header>
+
+        <main class="grid-container"> <!-- Grid wordt nu toegepast.-->
+            <aside>
+                <section>
+                    <button>
+                        X
+                    </button> <!-- Filter wordt nu toegepast met een overlay.-->
+                    <h3> Zoek een bijpassend verhaal</h3>
+
+                    <h4>Categorieen</h4>
+
+                    <details>
+
+                        <summary>Genre</summary>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="Avontuur" value="1">
+                                <label for="Avontuur">Avontuur (13)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Agressief" value="2">
+                                <label for="Agressief">Agressief (9)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Chaos" value="3">
+                                <label for="Chaos">Chaotisch (3)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Druk" value="4">
+                                <label for="Druk">Druk (4)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Formeel' value="5">
+                                <label for="Formeel">Formeel (9)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Grappig" value="6">
+                                <label for="Grappig">Grappig (8)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="Humeurig" value="7">
+                                <label for="fictie">Rusteloos (1)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fictie" value="9">
+                                <label for="fictie">Fictie (21)</label>
+                            </li>
+                        </ul>
+  
+                        
+                    </details>
+                    <form action="#">
+                        <fieldset>
+                            <legend>Leestijd <span>in minuten</span></legend>
+                         
+                            <input type="checkbox" id="eerste">
+                            <label for="eerste">0 - 2 </label>
+                            <input type="checkbox" id="tweede">
+                            <label for="tweede">2 - 4 </label>
+                            <input type="checkbox" id="derde">
+                            <label for="derde">4 - 6 </label>
+                            <input type="checkbox" id="derde">
+                            <label for="derde">6 - 8 </label>
+                           
+                         
+
+                        </fieldset>
+
+                    </form>
+                    <div>
+                        <ul>
+                            <li><a href="index.html" alt="gegevens verwijderen"> Verwijderen </a></li>
+                        </ul>
+                        <button>  Gewenste resultaten </button>
+                    </div>
+
+                </section>
+                <form>
+                    <button name="filter" type="button">Filteren</button>
+                    <label>
+                        Sorteer op
+                        <select>
+                            <option>Meeste reacties</option>
+                            <option>Meeste recente</option>
+                            <option>Meeste gelezen</option>
+                        </select>
+                    </label>
+                </form>
+            </aside> 
+
+            <section> <!-- Artikel 2-->
+                <article>
+                    <div>
+
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>
+
+
+
+                        <div>..</div>
+                        <div class="hurray">Je hebt het verhaal geliked</div>
+
+                    </div>
+                    <h2>Stijloefening (99)</h2>
+                    <h3>Telegrafisch</h3>
+                    <p>
+                        Ik stap bus 21...mijn zoon.. op nog geen halve...
+
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="login.html"> Lees dit verhaal</a>
+                        </li>
+                         <li class="download_knop">
+                    <img src="img/download.svg" alt="download" class="download is-actief">
+                    <img src="img/d_check.svg" alt="succes" class="succes">
+                    <img src="img/de_fail.svg" alt="error" class="error">
+                    <img src="img/dn.svg" alt="laden" class="laden">
+                </li>
+                    </ul>
+
+
+                    <footer>
+
+
+                        <ul>
+                            <li>Rusteloos</li>
+                            <li>39 </li>
+                            <li>0-1 min</li>
+                        </ul>
+
+
+                    </footer>
+                    <img src="img/artikel5.jpg" alt="Verhaal rusteloos" />
+                </article>
+
+                <article>
+                    <div>
+
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>
+
+
+
+                        <div>..</div>
+                        <div class="hurray">Je hebt het verhaal geliked</div>
+
+                    </div>
+                    <h2>Stijloefening (87)</h2>
+                    <h3>Alzheimer</h3>
+                    <p>
+                       Ik stap.... Mijn aarsrivaal.... in zijn kinderwagen. 
+                   </p>
+                   <ul>
+                    <li>
+                        <a href="login.html"> Lees dit verhaal</a>
+                    </li>
+                     <li class="download_knop">
+                    <img src="img/download.svg" alt="download" class="download is-actief">
+                    <img src="img/d_check.svg" alt="succes" class="succes">
+                    <img src="img/de_fail.svg" alt="error" class="error">
+                    <img src="img/dn.svg" alt="laden" class="laden">
+                </li>
+                </ul>
+                
+                <footer>
+
+                    <ul>
+                        <li>Agressief</li>
+                        <li>33 </li>
+                        <li>4 - 5  min</li>
+                    </ul>
+
+
+                </footer>
+                <img src="img/artikel1.jpg" alt="Verhaal van Agressief"/>
+            </article>
+
+            <article>
+                <div>
+
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>
+
+
+
+                    <div>..</div>
+                    <div class="hurray">Je hebt het verhaal geliked</div>
+
+                </div>
+
+                <h2>Stijloefening (68)</h2>
+                <h3>Droom</h3>
+                <p>
+                   Slierten mist zwerven... Net zat ik nog in....
+               </p>
+               <ul>
+                <li>
+                    <a href="login.html"> Lees dit verhaal</a>
+                </li>
+                 <li class="download_knop">
+                    <img src="img/download.svg" alt="download" class="download is-actief">
+                    <img src="img/d_check.svg" alt="succes" class="succes">
+                    <img src="img/de_fail.svg" alt="error" class="error">
+                    <img src="img/dn.svg" alt="laden" class="laden">
+                </li>
+            </ul>
+            <footer>
+
+
+                <ul>
+                    <li>Energiek</li>
+                    <li>21 </li>
+                    <li>4 - 5  min</li>
+                </ul>
+
+            </footer>
+            <img src="img/stop.jpg" alt="verhaal van droom" />
+
+
+        </article>
+    </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

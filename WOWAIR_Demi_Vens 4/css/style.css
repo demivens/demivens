@@ -1,0 +1,1439 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@font-face {
+  src: url("../fonts/museo700.ttf");
+  font-family: "museo700";
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  src: url("../fonts/museo700.ttf");
+  font-family: "museo700";
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5e5;
+  font-weight: lighter;
+}
+
+
+/* filter, leesttijd styling */
+
+input[type=radio] {
+  display: inline-block;
+  margin: 0.625rem;
+}
+
+
+/*  header styling */
+
+header {
+  color: white;
+}
+
+header section {
+  background-color: purple;
+  height: 12em;
+  background-size: cover;
+  background-image: url("../img/header3.png")
+}
+
+
+
+header nav {
+  color: purple;
+  background-color: white;
+  text-align: center;
+  border-bottom: 1px solid #707070;
+  height: 2em;
+}
+
+header nav ul {
+  text-align: right;
+  list-style: none;
+  margin-right: .6em;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 7px;
+  color: #797373;
+}
+
+header nav img {
+  width: 2.8em;
+  height: 2.8em;
+  position: absolute;
+  top: 0.8em;
+  left: calc( 50% - 1.4em);
+}
+
+header section {
+  padding: 3.5em;
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 3em;
+  font-family: 'museo700';
+}
+
+
+/* micro interactie download in de nav */
+
+nav ul li:not(:first-of-type) a img {
+  width: 0.90em;
+  height: 0.90em;
+  position: relative;
+  top: 0.1em;
+  left: 5em;
+}
+
+nav ul li a img.laden {
+  display: none;
+}
+
+nav ul li:not(:first-of-type) a img.error {
+  display: none;
+}
+
+nav ul li:not(:first-of-type) a img.succes {
+  display: none;
+}
+
+nav ul li:not(:first-of-type) a img.is-actief {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+nav ul li {
+  padding-left: 0.1rem;
+  margin-bottom: 7em;
+}
+
+nav ul li:first-child {
+  justify-content: flex-start;
+  margin-right: auto;
+  padding: 0;
+}
+
+nav ul li a {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.67rem;
+  color: #003082;
+  transition: 0.3s;
+}
+
+header nav ul li:not(:first-child) a::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: -0.5rem 75%;
+  background-size: 100%;
+  width: 2em;
+  height: 1.6em;
+  transition: 0.2s;
+}
+
+header nav ul li:not(:first-child) a:hover::before {
+  background-position: -0.1rem 75%;
+}
+
+.fa {
+  margin-left: 0.59em;
+  margin-top: 0.20em;
+  color: #99258d;
+  display: inline-block;
+  font-family: 'museo700', sans-serif;
+  font-size: 2em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+main section article ul li:first-child {
+  justify-content: flex-start;
+  margin-right: auto;
+  list-style: none;
+}
+
+main section article ul li a {
+  padding-left: 1.625rem;
+  background-repeat: no-repeat;
+  background-position: -5% 58%;
+  background-image: url('../img/arrow.svg');
+  transition: 0.3s;
+  line-height: 2.5rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+main section article>ul li a:hover {
+  background-position: 7% 78%;
+  transition: 0.3s;
+}
+
+main section article>ul li a:active {
+  color: #003082;
+}
+
+/*  MICROINTERACTIEEEEEEEEEEE. */
+
+main section article>ul li.loadingState {
+  max-width: 100%;
+  background-color: #ffffff;
+  padding: 2em 2em 1.25em;
+}
+
+main section article>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+main section article>ul li:first-child {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+main section article>ul li img {
+  width: 1.3rem;
+}
+
+main section article>ul li a:hover {
+  background-position: -8% 58%;
+}
+
+main section article>ul li a:active {
+  color: #003082;
+}
+
+main section:nth-of-type(2) article>ul li img {
+  width: 1.3rem;
+}
+
+main section article>ul li img.download {
+  display: none;
+}
+
+@keyframes draaien {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+main section article>ul li img.succes {
+  display: none;
+}
+
+main section article>ul li img.error {
+  display: none;
+}
+
+main section article>ul li img.laden {
+  display: none;
+  animation: draaien infinite 2s;
+}
+
+main section article>ul li img.is-actief {
+  display: block;
+}
+
+main section form fieldset {
+  border: 0;
+}
+
+
+header nav img {
+  width: 2.8em;
+  height: 2.8em;
+  position: absolute;
+  top: 0.8em;
+  left: calc( 50% - 1.4em);
+}
+
+header section {
+  padding: 1.5em;
+}
+
+header h1 {
+  width: 50%;
+  font-weight: normal;
+  font-size: 2em;
+}
+
+
+/*alle linkjes styling */
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: grey;
+}
+
+a:visited {
+  color: black;
+}
+
+a:link {
+  color: grey;
+}
+
+a:active {
+  color: #404040;
+}
+
+a:hover {
+  color: purple;
+}
+
+
+/* eindig header*/
+
+select {
+  background-color: white;
+  border: none;
+  color: #404040;
+  padding: 5px;
+  padding-left: 10px;
+  width: 50%;
+  font-weight: lighter;
+  -webkit-appearance: none;
+}
+
+form {
+  display: block;
+}
+
+main section form fieldset label {
+  width: 65%;
+  text-align: center;
+  padding: 0.8rem 0 0.5rem;
+}
+
+main section form fieldset div {
+  display: flex;
+  flex-direction: row;
+}
+
+fieldset legend {
+  padding-top: 1em;
+  font-size: 1rem;
+  margin: 0 0 0.8rem;
+}
+
+
+/*button in het artikel */
+
+article input[type="submit"] {
+  background-color: #919191;
+  color: #fff;
+  padding: 13px 28px;
+  text-decoration: none;
+  margin: 9px 0.5px;
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
+
+article input[type=submit]:hover {
+  background-color: #6A6464;
+}
+
+.grid-container aside section {
+  display: none;
+  position: fixed;
+  padding: 1em;
+  top: 0;
+  left: 0;
+  bottom: 5.6em;
+  background-color: white;
+  z-index: 1;
+}
+
+aside div {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 50% calc(50% - 10px);
+  text-align: center;
+}
+
+
+/* pakt de tweede button , in de filter (gewenste resultaten) */
+
+aside button:nth-child(2n) {
+  background-color: #680280;
+  color: white;
+  border: 0;
+  padding: 0.5em;
+  border-radius: .25em;
+}
+
+
+/* filter button op de overzichtspagina */
+
+aside>form button[name=filter] {
+  background-color: #7A0296;
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 0;
+  margin-bottom: 0.5em;
+}
+
+
+/* filter button als je er overheen scrolt*/
+
+aside>form button[name=filter]:hover {
+  background-color: #9604B9;
+}
+
+aside section li {
+  list-style-type: none;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+article {
+  background-color: white;
+  margin: 1.5em 1.5em 1em 1.5em;
+  position: relative;
+  padding: 1.5em;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .05);
+}
+
+
+/* main grid */
+
+main section {
+  grid-area: main;
+}
+
+article img {
+  margin: 0.5em -1.5em -1.5em;
+  display: block;
+  width: calc(100% + 3em);
+}
+
+aside {
+  grid-area: sd;
+}
+
+aside>form {
+  margin: 1em 1.5em;
+}
+
+article h2,
+article h3 {
+  text-transform: uppercase;
+}
+
+article h2 {
+  margin-right: 2em;
+  padding-bottom: 0.5em;
+  padding-top: 0.2em;
+  font-weight: 900;
+}
+
+article h3 {
+  color: gray;
+  border-bottom: 4px solid purple;
+  padding-bottom: 0.5em;
+  font-weight: lighter;
+}
+
+article>div:first-child {
+  position: absolute;
+  right: 1em;
+  top: -0.5em;
+  text-align: center;
+  display: block;
+  width: 40px;
+  height: 50px;
+  background: darkgray;
+}
+
+section article div svg:last-of-type {
+  margin-top: 10px;
+  height: 30px;
+  fill: #FFF;
+}
+
+section article div svg:first-of-type {
+  margin-top: 10px;
+  height: 30px;
+  fill: #fff;
+}
+
+section article div svg.heartred:first-of-type {
+  margin-top: 10px;
+  height: 30px;
+  fill: #fff;
+}
+
+section article div svg div.hurray {
+  margin-top: 10px;
+  height: 30px;
+  fill: #fff;
+}
+
+.hurray+svg+div+div {
+  display: block;
+}
+
+article div svg+.message+div {
+  display: block;
+}
+
+article div svg~div {
+  display: none;
+  fill: #fff;
+  transition: 0.3sec;
+}
+
+article div .message+div {
+  display: block;
+  background-color: darkgrey;
+  color: white;
+}
+
+article div .hurray {
+  display: none;
+  background-color: darkgrey;
+  color: white;
+  font-size: 0.7em;
+}
+
+.hurray+div+div {
+  display: block;
+}
+
+article>div:first-child::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  width: 0;
+  height: 1;
+  border-width: 12px 20px 20px 20px;
+  border-style: solid;
+  border-color: darkgray darkgray transparent darkgray;
+}
+
+svg {
+  transition: transform .1s;
+  /* Animation */
+  z-index: 33333;
+}
+
+svg:hover {
+  transform: scale(1.5);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  fill: rgb(220, 72, 127);
+}
+
+header article {
+  background-color: #FFDF5C;
+  color: black;
+  margin-top: -3em;
+}
+
+article p {
+  margin: 1em 0;
+  font-family: 'Noto Sans', sans-serif;
+  min-width: 20em;
+}
+
+aside>form input[type=submit] {
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 0;
+  margin-bottom: 0.5em;
+}
+
+aside section ul {
+  position: relative;
+  color: lightgrey;
+  padding-top: 0.6em;
+}
+
+aside section li {
+  padding-top: 0.2em;
+}
+
+aside h3 {
+  padding-top: 0.8em;
+  padding-left: 0.3em;
+}
+
+aside h4 {
+  padding-top: 0.8em;
+  padding-left: 0.3em;
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+aside ul {
+  padding-right: 1em;
+}
+
+
+/* OVERLAY FILTER ZORGT ER VOOR DAT HET SOEPEL LOOPT ( ANIMATIE) */
+
+details {
+  padding-left: 0.8em;
+  padding-top: 0.3em;
+}
+
+details summary {
+  color: grey;
+  font-weight: 400;
+  font-size: 1em;
+  transition: width 2s;
+}
+
+details[open] summary~* {
+  animation: fadeIn .5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.25em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*Transform verplaast de content van details een beetje omhoog, transform zorgt dat het animeert.*/
+
+.grid-container1 section article:first-child {
+  background-color: #FFDF5C;
+}
+
+
+/* OPMAAK VAN LOGIN PAGINA */
+
+.grid-container2 section article:first-child {
+  background-color: #FFDF5C;
+}
+
+
+/* FORM REACTIE PLAATSEN */
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 1em;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  margin-right: 1em;
+  text-align: left;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#subject {
+  height: 200px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+footer ul li {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  line-height: 1.67rem;
+  color: #797979;
+}
+
+footer ul li:first-child {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+footer ul li a img {
+  margin: -0.25rem 0 0;
+}
+
+main section article :nth-of-type(2) footer ul li:first-child {
+  justify-content: flex-start;
+  margin: 0 auto 0 0;
+}
+
+main section article:nth-of-type(1) footer ul li:not(:first-child)::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 0.4rem 0.1rem;
+  background-size: 55%;
+  width: 2rem;
+  height: 1.6rem;
+}
+
+main section article:nth-of-type(2) footer ul li:nth-child(2)::before {
+  background-image: url(../img/comment2.svg);
+}
+
+main section article:nth-of-type(2) footer ul li:nth-child(3)::before {
+  background-image: url(../img/clock1.svg);
+}
+
+main section article:nth-of-type(2) footer ul li:not(:first-child)::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 0.4rem 0.1rem;
+  background-size: 55%;
+  width: 2rem;
+  height: 1.6rem;
+}
+
+main section article footer ul li {
+  margin-right: 1rem;
+}
+
+main section article:nth-of-type(3) footer ul li:nth-child(2)::before {
+  background-image: url(../img/comment2.svg);
+}
+
+main section article:nth-of-type(3) footer ul li:nth-child(3)::before {
+  background-image: url(../img/clock1.svg);
+}
+
+main section article:nth-of-type(3) footer ul li:not(:first-child)::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 0.4rem 0.1rem;
+  background-size: 55%;
+  width: 2rem;
+  height: 1.6rem;
+}
+
+main section article:nth-of-type(1) footer ul li:nth-child(2)::before {
+  background-image: url(../img/comment2.svg);
+}
+
+main section article:nth-of-type(1) footer ul li:nth-child(3)::before {
+  background-image: url(../img/clock1.svg);
+}
+
+header article:nth-of-type(1) footer ul li:nth-child(2)::before {
+  background-image: url(../img/comment2.svg);
+}
+
+header article:nth-of-type(1) footer ul li:nth-child(3)::before {
+  background-image: url(../img/clock1.svg);
+}
+
+header article:nth-of-type(1) footer ul li:not(:first-child)::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 0.4rem 0.1rem;
+  background-size: 55%;
+  width: 2rem;
+  height: 1.6rem;
+}
+
+header article footer ul li {
+  margin-right: 1rem;
+  color: black;
+}
+
+
+/*bron : https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+
+
+/* --------------------------MOBIEL 1 PAGINA ----------------------- */
+
+@media (min-width:20.25em) {
+  .grid-container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "sd sd sd sd sd sd sd sd sd" "main main main main main main main main main"
+  }
+  /*-------------- OP MAAK OVERZICHTSPAGINA -----------------*/
+  .grid-container section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-weight: normal;
+    font-size: 1.8em;
+    font-family: 'museo700';
+    padding-top: 1em;
+  }
+  article p {
+    font-size: 0.8em;
+  }
+  a {
+    font-size: 0.8em;
+  }
+  body>footer {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 2em;
+    font-family: "museo700", sans-serif;
+  }
+  /*-------------- OP MAAK VERHALEN PAGINA -----------------*/
+  .grid-container1 {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "sd sd sd sd sd sd sd sd sd" "main main main main main main main main main"
+  }
+  .grid-container1 section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .img {
+    background-color: white;
+    display: inline-block;
+    grid-template-columns: 1fr;
+  }
+  .imgbox img {
+    max-width: 98%;
+    max-height: 100%;
+  }
+  .img>img,
+  .imgbox {
+    max-width: 70%;
+    max-height: 100%;
+  }
+  .img .imgbox img {
+    max-width: 140%;
+    max-height: 100%;
+  }
+  #text1 {
+    max-width: 60%;
+    max-height: 100%;
+    position: absolute;
+    top: 12%;
+    right: 65%;
+    margin-top: 7.5em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: right;
+  }
+  #text2 {
+    position: relative;
+    bottom: 18em;
+    left: 8em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    transform: rotate(356deg);
+    transform-origin: 20% 40%;
+  }
+  #text3 {
+    max-width: 80%;
+    max-height: 100%;
+    position: absolute;
+    top: 110%;
+    right: 62%;
+    margin-top: 7.5em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: right;
+  }
+  #text4 {
+    max-width: 70%;
+    max-height: 100%;
+    position: absolute;
+    top: 179%;
+    right: 8%;
+    margin-left: 26em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: left;
+    transform: rotate(10deg);
+    transform-origin: 20% 40%;
+  }
+  #text5 {
+    max-width: 50%;
+    max-height: 100%;
+    position: absolute;
+    top: 243%;
+    right: 72%;
+    margin-left: 26em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: right;
+  }
+  #text6 {
+    max-width: 80%;
+    max-height: 100%;
+    position: absolute;
+    top: 270%;
+    right: 3%;
+    margin-top: 7.5em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    transform: rotate(10deg);
+    transform-origin: 20% 40%;
+  }
+  /* AUDIO VERHALEN PAGINA */
+  audio {
+    background-color: #95B9C7;
+    display: none;
+  }
+  figure {
+    margin-bottom: 2em;
+    margin-right: 1px;
+  }
+  figure img {
+    margin-left: 0.8em;
+    margin-bottom: 150px;
+  }
+  select {
+    text-align: center;
+  }
+  header footer img {
+    display: none;
+  }
+  header nav ul li a span {
+    position: relative;
+    width: auto;
+    margin-left: 0.1em;
+  }
+}
+
+
+/* --------------------------tablet 2 KOLOMMEN SCHAALT---------------------- */
+
+@media (min-width:40.25em) {
+  .grid-container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "sd sd sd sd sd sd sd sd sd" "main main main main main main main main main"
+  }
+  input[type="text"],
+  select,
+  textarea {
+    text-align: center;
+  }
+  .grid-container section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-container aside section {
+    display: none;
+    position: fixed;
+    padding: 1em;
+    top: 0;
+    right: 7;
+    bottom: 5.6em;
+    background-color: white;
+    z-index: 1;
+    right: 60%;
+  }
+  article p {
+    font-size: 1em;
+    width: 20-40em;
+  }
+  a {
+    font-size: 1em;
+  }
+  aside>form button[name=filter] {
+    background-color: #7A0296;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    border: 0;
+    margin-bottom: 0.5em;
+  }
+  aside section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 5px;
+    bottom: 0;
+    background-color: white;
+  }
+  aside>form button[name=filter] {
+    background-color: #7A0296;
+    width: 40%;
+    color: white;
+    font-size: 1em;
+    border: 0;
+    /* margin-bottom: 0.5em; */
+    /* margin-left: 1em; */
+    /* margin-right: 12em; */
+    margin-right: 3.150em;
+    margin-bottom: 0;
+  }
+  select {
+    background-color: white;
+    border: none;
+    color: #404040;
+    padding: 1em;
+    padding-left: 10px;
+    width: 40%;
+    font-weight: lighter;
+    -webkit-appearance: none;
+  }
+  /*-------------- ZORGT ERVOOR HET ARTIKEL WORDT GETOOND IN DE HEADER -----------------*/
+  header article {
+    display: visible;
+  }
+  /*-------------- ZORGT ERVOOR DAT DE IMG NIET WORDT GETOOND IN DE HEADER -----------------*/
+  header article img {
+    display: none;
+  }
+  header h1 {
+    width: 50%;
+    font-weight: normal;
+    font-size: 1.8em;
+    margin-top: 0;
+  }
+  /*-------------- OP MAAK VERHALEN PAGINA -----------------*/
+  grid-container1 {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "sd sd sd sd sd sd sd sd sd" "main main main main main main main main main"
+  }
+  .grid-container1 section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .img {
+    background-color: white;
+    display: inline-block;
+    grid-template-columns: 1fr;
+  }
+  .imgbox img {
+    max-width: 98%;
+    max-height: 100%;
+  }
+  .img>img,
+  .imgbox {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .img .imgbox img {
+    max-width: 140%;
+    max-height: 100%;
+  }
+  #text1 {
+    max-width: 20%;
+    max-height: 100%;
+    position: absolute;
+    top: 55%;
+    right: 78%;
+    margin-top: 7.5em;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-color: #707070;
+    text-align: right;
+  }
+  #text2 {
+    position: relative;
+    bottom: 12em;
+    left: 3em;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-color: #707070;
+    transform: rotate(356deg);
+    transform-origin: 20% 40%;
+  }
+  figure {
+    display: block;
+    margin-bottom: 2em;
+    margin-left: 140px;
+    margin-right: 1px;
+  }
+  figure img {
+    margin-left: 0.8em;
+    margin-bottom: 150px;
+    width: 130%;
+    max-height: 100%;
+  }
+  span.line {
+    display: inline-block;
+  }
+  header h1 {
+    top: 30%;
+    font-size: 2.5em;
+    min-width: 20em;
+    margin-left: 1em;
+    font-family: "museo700";
+  }
+}
+
+
+/* --------------------------desktop schaalt mee 3 columns------------------------ */
+
+@media (min-width:60em) {
+  .grid-container {
+    grid-template-areas: "sd sd sd main main main main main main main" "sd sd sd main main main main main main main"
+  }
+  aside section {
+    position: relative;
+  }
+  article p {
+    font-size: 1em;
+    width: 20-40em;
+  }
+  .grid-container1 {
+    grid-template-areas: "sd main main main main main main main main" "sd main main main main main main main main main"
+  }
+  grid-container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(, 1fr);
+    grid-template-areas: "sd sd sd sd sd sd sd sd sd" "main main main main main main main main main"
+  }
+  .grid-container section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  aside section {
+    position: relative;
+  }
+  /*-------------- OP MAAK VERHALEN PAGINA -----------------*/
+  .grid-container1 {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: "sd sd sd sd sd sd sd sd sd" "main main main main main main main main main"
+  }
+  .grid-container1 section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-container aside section {
+    display: none;
+    position: fixed;
+    padding: 1em;
+    top: 0;
+    right: 7;
+    bottom: 5.6em;
+    background-color: white;
+    z-index: 1;
+    right: 60%;
+  }
+  input[type="text"],
+  select,
+  textarea {
+    text-align: center;
+  }
+  /*-------------- REACTIE PLAATSEN EN INFO WORDT IN 2 COLUMNS GEPLAATST -----------------*/
+  .img {
+    background-color: white;
+    display: inline-block;
+    grid-template-columns: 2fr;
+  }
+  .imgbox img {
+    max-width: 98%;
+    max-height: 100%;
+  }
+  .img>img,
+  .imgbox {
+    max-width: 45%;
+    max-height: 100%;
+    display: inline-block;
+  }
+  /*-------------- PAKT ALLE IMG UIT DE IMG BOX, HIERONDER WORDT HET AANGEPAST -----------------*/
+  .img .imgbox img {
+    max-width: 140%;
+    max-height: 100%;
+  }
+  #text1 {
+    max-width: 20%;
+    max-height: 100%;
+    position: absolute;
+    top: 55%;
+    right: 78%;
+    margin-top: 7.5em;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-color: #707070;
+    text-align: right;
+  }
+  #text2 {
+    position: relative;
+    bottom: 12em;
+    left: 3em;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-color: #707070;
+    transform: rotate(356deg);
+    transform-origin: 20% 40%;
+  }
+  #text3 {
+    max-width: 80%;
+    max-height: 100%;
+    position: absolute;
+    top: 180%;
+    right: 62%;
+    margin-top: 7.5em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: right;
+  }
+  #text4 {
+    max-width: 70%;
+    max-height: 100%;
+    position: absolute;
+    top: 198%;
+    right: 8%;
+    margin-left: 26em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: left;
+    transform: rotate(10deg);
+    transform-origin: 20% 40%;
+  }
+  #text5 {
+    max-width: 70%;
+    max-height: 100%;
+    position: absolute;
+    top: 198%;
+    right: 8%;
+    margin-left: 26em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: left;
+    transform: rotate(10deg);
+    transform-origin: 20% 40%;
+  }
+  #text6 {
+    max-width: 70%;
+    max-height: 100%;
+    position: absolute;
+    top: 300%;
+    right: 8%;
+    margin-left: 26em;
+    font-size: 0.6em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #A0A0A0;
+    text-align: left;
+    transform: rotate(10deg);
+    transform-origin: 20% 40%;
+  }
+  /*bron https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_transform-origin*/
+  #text3 {
+    position: relative;
+    right: 10em;
+    bottom: 55em;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-color: #707070;
+    transform: rotate(356deg);
+    transform-origin: 20% 40%;
+  }
+  /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_transform-origin*/
+  .devrouw {
+    display: block;
+    margin-bottom: 2em;
+    margin-left: 140px;
+    margin-right: 1px;
+  }
+  .devrouw img {
+    margin-left: 0.8em;
+    width: 130%;
+    max-height: 100%;
+  }
+  .next {
+    display: block;
+    width: 88%;
+    max-height: 100%;
+    margin-left: 0.8em;
+  }
+  .next .scooter {
+    display: inline-block;
+    margin-left: 0.8em;
+    width: 120%;
+    max-height: 100%;
+  }
+  .next img.krant {
+    display: block;
+    margin-left: 0.8em;
+    width: 120%;
+    max-height: 100%;
+  }
+  .krant {
+    margin-top: 100%;
+    width: 68%;
+    max-height: 100%;
+    bottom: 49%;
+  }
+  .shop {
+    position: relative;
+    display: block;
+    width: 80%;
+    max-height: 100%;
+    margin-left: 0.8em;
+  }
+  .schoenen {
+    width: 78%;
+    max-height: 100%;
+    margin-left: 4.8em;
+    top: 70%;
+  }
+  header article ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  header article ul li {
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    line-height: 1.67rem;
+    color: #797979;
+  }
+  header article li:first-child {
+    justify-content: flex-start;
+    margin-right: auto;
+  }
+  header article ul li a img {
+    margin: -0.25rem 0 0;
+  }
+  aside>form button[name=filter] {
+    background-color: #7A0296;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    border: 0;
+    /* margin-bottom: 0.5em; */
+    /* margin-left: 1em; */
+    /* margin-right: 12em; */
+    margin-right: 3.150em;
+  }
+  input[type=text],
+  select,
+  textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  select {
+    background-color: white;
+    border: none;
+    color: #404040;
+    padding: 1em;
+    justify-content: center;
+    width: 100%;
+    font-weight: lighter;
+    -webkit-appearance: none;
+    margin-top: 1em;
+  }
+  select option {
+    text-align: center;
+  }
+  header h1 {
+    top: 30%;
+    font-size: 3em;
+    min-width: 20em;
+    margin-left: 0.7em;
+    font-family: "museo700";
+  }
+}
+

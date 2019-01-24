@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<title>Demi Vens | Verhaal</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<meta name="viewport" content="witdth=device-width, initial-scale=1">
+	</head>
+	<body>
+		<header>
+			<div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img src="img/logo.svg">
+                        </a>
+                    </li>
+
+                    <li>
+                      <a href="leeslijst.html">
+                            <img src="img/lKlein.svg" alt="laden" class="laden">
+                            <img src="img/eKlein.svg" alt="error" class="error">
+                            <img src="img/cKlein.svg" alt="succes" class="succes">
+                            <span id="mijn">Leeslijst</span>
+                        </a>
+                        <li><a href="verhaal.html"><span class="wowair">Mijn wow</span>
+                        <i class="fa fa-lock"></i></a></li>
+                    </li>
+                 
+                    </ul>
+                </nav>
+            </div>
+		</header>
+		<main>
+			<div class="img grid-container">
+			  <!-- Fiets plaatje -->
+				
+				<div class="imgbox">
+					<img src="img/defiets.png" alt="defiets" />
+					
+					<p id="text1">BUS STOPT STOP NAAR
+						<span class="line"> BIBLIOTHEEK VOOR STIJLOEFENINGENSTOP </span>
+						<span class="line">VAN RAYMOND QUENEAU </span>
+						<audio autoplay="true" src="2-1-10044.mp3"" type="audio/ogg"></audio>
+					</p>
+
+				</div>
+				<!-- De vrouw plaatje -->
+				
+				<div class="imgbox">
+					<figure class="devrouw">
+						<img src="img/devrouw1.png" alt="devrouw"  value="PLAY"  onclick="play()"/>
+						<audio autoplay="true" src="les_associations_caritatives.mp3"" type="audio/ogg"></audio>
+
+						<p id="text2">
+							STOP VROUW VRAAGT IN ENGELS MET FRANS ACCENT
+							OF DIT POSTKANTOOR IS STOP ONTKENNEND
+							ANTWOORD WORDT NIET GEHOORD
+						</p>
+						
+					</figure>
+				</div>
+
+				<!-- De scooter plaatje -->
+				
+				<div class="imgbox">
+					<figure class="next">
+						<img src="img/descooter1.png"  alt="descooter" id="scooter" />
+						<audio autoplay="true" src="Motorcycle.au"" type="audio/au"></audio>
+						
+						<p id="text3">
+							STOP ONTKENNEND ANTWOORD
+							WORDT NIET GEHOORD WEGENS WEGRENNEN
+							NAAR ACHTERUITRIJDENDE RENAULT STOP
+							TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN
+						</p>
+
+					</figure>
+				</div>
+
+				<!-- De krant plaatje -->
+				
+				<div class="imgbox">
+					<figure class="krant">
+						<img src="img/dekrant.png" id="krant" alt="dekrant" />
+
+						<p id="text4">
+							STOP STIJLOEFENINGEN NIET
+							AANWEZIG STOP VOLGENS COMPUTER
+							WEL STOP MEDEWERKER ZOEKT MEE
+						</p>
+
+					</figure>
+				</div>
+
+				<!-- De shop plaatje -->
+				
+				<div class="imgbox">
+					<figure class="shop">
+						<img src="img/deshop.png" alt="deshop" />
+						
+						<p id="text5">
+							STOP STIJLOEFENINGEN NIET  AANWEZIG STOP VOLGENS COMPUTER
+							WEL STOP MEDEWERKER ZOEKT MEE
+						</p>
+
+					</figure>
+				</div>
+				<div class="imgbox">
+					<figure class="schoenen">
+						<img src="img/schoenen1.png" alt="deschoenen" />
+		
+						<p id="text6">
+							STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE BESTEMDE PLEK STOP KUT STOP BABYSCHOENTJES IN BABYWINKEL OP BOS EN LOMMERPLEIN STOP OOK MOOI STOP	
+						</p>
+					</figure>
+				</div>
+			</div>
+			<div class="grid-container1">
+				<section>
+					<article>		<!-- informatie verhaal-->
+						
+						
+						<h2>STIJLOEFENING - MOLOVICH</h2>
+						<h3>RUSTELOOS</h3>
+						<p>
+							
+							BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE BESTEMDE PLEK STOP KUT STOP BABYSCHOENTJES IN BABYWINKEL OP BOS EN LOMMERPLEIN STOP OOK MOOI STOP
+							
+						</p>
+						
+					</article>
+					
+					<article>		<!-- Reactie plaatsen-->
+						
+						
+						<h2>0 reacties op dit verhaal</h2>
+						<form action="action_page.php">
+							<label for="fname">Naam</label>
+							<input type="text" id="fname" name="firstname" placeholder="Your name..">
+							<label for="subject">Onderwerp</label>
+							<textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+						</form>
+						
+						<footer>
+							<form action="#">
+								<input type="submit" value="Reactie plaatsen" />
+							</form>	
+						</footer>
+						
+					</article>
+					
+					
+				</section>
+			</div>
+		</main>
+	</body>
